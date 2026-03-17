@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGen Pro | Nifail S.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <label id="switch" class="switch">
+            <input type="checkbox" id="slider">
+            <span class="slider round"></span>
+        </label>
+        <span id="theme-text">Dark Mode</span>
+    </div>
+
+    <div class="container animate-in">
+        <h1>SecureGen Pro</h1>
+        
+        <div class="display-container">
+            <input type="text" id="password-display" readonly placeholder="Click Generate">
+            <button id="copy-btn" title="Copy to Clipboard">📋</button>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Length: <span id="length-val">12</span></label>
+                <input type="range" id="length-slider" min="8" max="50" value="12">
+            </div>
+            <div class="setting">
+                <label>Uppercase (A-Z)</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="setting">
+                <label>Numbers (0-9)</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="setting">
+                <label>Symbols (!@#)</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <div class="strength-meter">
+            <div id="strength-bar"></div>
+        </div>
+
+        <div class="button-group">
+            <button id="generate-btn">Generate</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
